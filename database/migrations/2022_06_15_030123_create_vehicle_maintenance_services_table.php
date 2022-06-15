@@ -12,6 +12,7 @@ return new class extends Migration {
             $table->foreignId('vehicle_maintenance_id')
                 ->constrained('vehicle_maintenances')
                 ->cascadeOnUpdate();
+            $table->string('type');
             $table->string('name');
             $table->integer('cost')->default(0);
             $table->timestamps();

@@ -48,6 +48,31 @@ class MaintenanceResource extends Resource
                         ->placeholder(__('Service provider'))
                         ->required()
                         ->columnSpan(6),
+                    TextInput::make('contact')
+                        ->label(__('Contact of service provider'))
+                        ->placeholder(__('Contact'))
+                        ->required()
+                        ->columnSpan(1),
+                    TextInput::make('address')
+                        ->label(__('Address of service provider'))
+                        ->placeholder(__('Address'))
+                        ->required()
+                        ->columnSpan(5),
+                    TextInput::make('city')
+                        ->label(__('City of service provider'))
+                        ->placeholder(__('City'))
+                        ->required()
+                        ->columnSpan(2),
+                    TextInput::make('state')
+                        ->label(__('State of service provider'))
+                        ->placeholder(__('State'))
+                        ->required()
+                        ->columnSpan(2),
+                    TextInput::make('country')
+                        ->label(__('Country of service provider'))
+                        ->placeholder(__('Country'))
+                        ->required()
+                        ->columnSpan(2),
                     Textarea::make('note')
                         ->label(__('Note'))
                         ->placeholder(__('Write something notable..'))

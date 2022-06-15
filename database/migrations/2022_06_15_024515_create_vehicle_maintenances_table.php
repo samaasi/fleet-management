@@ -15,6 +15,11 @@ return new class extends Migration {
             $table->dateTime('date_of_service');
             $table->string('mileage_at_service')->nullable();
             $table->string('service_provider')->nullable();
+            $table->string('contact')->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('country')->nullable();
             $table->integer('cost')->default(0);
             $table->text('note')->nullable();
             $table->timestamps();
