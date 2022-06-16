@@ -52,12 +52,12 @@ class MaintenanceResource extends Resource
                         ->label(__('Contact of service provider'))
                         ->placeholder(__('Contact'))
                         ->required()
-                        ->columnSpan(1),
+                        ->columnSpan(2),
                     TextInput::make('address')
                         ->label(__('Address of service provider'))
                         ->placeholder(__('Address'))
                         ->required()
-                        ->columnSpan(5),
+                        ->columnSpan(4),
                     TextInput::make('city')
                         ->label(__('City of service provider'))
                         ->placeholder(__('City'))
