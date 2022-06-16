@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Enums\Automobile\VehicleMaintenanceServiceType;
 
 class VehicleMaintenanceService extends Model
 {
@@ -13,7 +14,8 @@ class VehicleMaintenanceService extends Model
     use SoftDeletes;
 
     protected $casts = [
-        'cost' => 'integer'
+        'cost' => 'integer',
+        'type' => VehicleMaintenanceServiceType::class,
     ];
 
     public function maintenance(): BelongsTo

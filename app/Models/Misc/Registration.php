@@ -4,7 +4,7 @@ namespace App\Models\Misc;
 
 use App\Models\Account\User;
 use Illuminate\Database\Eloquent\Model;
-use App\Enums\Misc\RegistrationTypeEnum;
+use App\Enums\Misc\RegistrationType;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,7 +16,7 @@ class Registration extends Model
 
     protected $casts = [
         'duration' => 'datetime',
-        'type' => RegistrationTypeEnum::class,
+        'type' => RegistrationType::class,
     ];
 
     public function creator(): BelongsTo

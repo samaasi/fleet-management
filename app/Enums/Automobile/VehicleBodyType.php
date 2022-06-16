@@ -4,7 +4,7 @@ namespace App\Enums\Automobile;
 
 use App\Enums\Traits\ExtendEnums;
 
-enum VehicleBodyTypeEnum: string
+enum VehicleBodyType: string
 {
     use ExtendEnums;
 

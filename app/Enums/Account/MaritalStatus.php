@@ -4,7 +4,7 @@ namespace App\Enums\Account;
 
 use App\Enums\Traits\ExtendEnums;
 
-enum MaritalStatusEnum: string
+enum MaritalStatus: string
 {
     use ExtendEnums;
 

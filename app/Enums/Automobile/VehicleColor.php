@@ -4,7 +4,7 @@ namespace App\Enums\Automobile;
 
 use App\Enums\Traits\ExtendEnums;
 
-enum VehicleColorEnum: string
+enum VehicleColor: string
 {
     use ExtendEnums;
 

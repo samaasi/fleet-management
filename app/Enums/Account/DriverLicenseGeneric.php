@@ -4,7 +4,7 @@ namespace App\Enums\Account;
 
 use App\Enums\Traits\ExtendEnums;
 
-enum DriverLicenseGenericEnum: string
+enum DriverLicenseGeneric: string
 {
     use ExtendEnums;
 

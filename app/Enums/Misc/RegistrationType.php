@@ -4,10 +4,10 @@ namespace App\Enums\Misc;
 
 use App\Enums\Traits\ExtendEnums;
 
-enum ReligionEnum: string
+enum RegistrationType: string
 {
     use ExtendEnums;
 
-    case MUSLIM = "muslim";
-    case CHRISTIANITY = "christianity";
+    case USER = "user";
+    case DRIVER = "driver";
 }

@@ -4,7 +4,7 @@ namespace App\Enums\Account;
 
 use App\Enums\Traits\ExtendEnums;
 
-enum UserAccountTypeEnum: string
+enum UserAccountType: string
 {
     use ExtendEnums;
 

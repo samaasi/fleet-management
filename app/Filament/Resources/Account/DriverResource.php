@@ -2,18 +2,18 @@
 
 namespace App\Filament\Resources\Account;
 
-use App\Enums\Misc\ReligionEnum;
+use App\Enums\Misc\Religion;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use App\Models\Account\Driver;
 use Filament\Resources\Resource;
-use App\Enums\Account\GenderEnum;
+use App\Enums\Account\Gender;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Wizard;
 use Filament\Forms\Components\Textarea;
-use App\Enums\Account\MaritalStatusEnum;
+use App\Enums\Account\MaritalStatus;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Wizard\Step;
@@ -83,12 +83,12 @@ class DriverResource extends Resource
                                                     Select::make('gender')
                                                         ->label(__('Gender'))
                                                         ->placeholder(__('Select gender'))
-                                                        ->options(GenderEnum::options())
+                                                        ->options(Gender::options())
                                                         ->required()
                                                         ->columnSpan(2),
                                                     Select::make('marital_status')
                                                         ->label(__('Marital status'))
-                                                        ->options(MaritalStatusEnum::options())
+                                                        ->options(MaritalStatus::options())
                                                         ->placeholder(__('Select marital status'))
                                                         ->required()
                                                         ->columnSpan(2),
@@ -101,7 +101,7 @@ class DriverResource extends Resource
                                                     Select::make('religion')
                                                         ->label(__('Religion'))
                                                         ->placeholder(__('Select religion'))
-                                                        ->options(ReligionEnum::options())
+                                                        ->options(Religion::options())
                                                         ->required()
                                                         ->columnSpan(2),
                                                     TextInput::make('nationality')

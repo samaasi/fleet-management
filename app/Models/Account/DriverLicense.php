@@ -5,9 +5,9 @@ namespace App\Models\Account;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use App\Enums\Account\DriverLicenseTypeEnum;
+use App\Enums\Account\DriverLicenseType;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Enums\Account\DriverLicenseGenericEnum;
+use App\Enums\Account\DriverLicenseGeneric;
 use App\Models\Builders\DriverLicenseQueryBuilder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -25,8 +25,8 @@ class DriverLicense extends Model implements HasMedia
         'issued_date'       => 'datetime',
         'expiration_date'   => 'datetime',
         'first_issued_date' => 'datetime',
-        'type'              => DriverLicenseTypeEnum::class,
-        'generic'           => DriverLicenseGenericEnum::class,
+        'type'              => DriverLicenseType::class,
+        'generic'           => DriverLicenseGeneric::class,
     ];
 
     public function newEloquentBuilder($query): DriverLicenseQueryBuilder

@@ -14,14 +14,14 @@ use App\Support\Generators\VehicleID;
 use Filament\Forms\Components\Section;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
-use App\Enums\Automobile\VehicleModeEnum;
+use App\Enums\Automobile\VehicleMode;
 use Filament\Forms\Components\Placeholder;
-use App\Enums\Automobile\VehicleColorEnum;
+use App\Enums\Automobile\VehicleColor;
 use App\Enums\Automobile\VehicleDriveType;
-use App\Enums\Automobile\VehicleBodyTypeEnum;
-use App\Enums\Automobile\VehicleCylinderEnum;
-use App\Enums\Automobile\VehicleFuelTypeEnum;
-use App\Enums\Automobile\VehicleGearBoxTypeEnum;
+use App\Enums\Automobile\VehicleBodyType;
+use App\Enums\Automobile\VehicleCylinder;
+use App\Enums\Automobile\VehicleFuelType;
+use App\Enums\Automobile\VehicleGearBoxType;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use App\Filament\Resources\Automobile\VehicleResource\Pages;
 use App\Filament\Resources\Automobile\VehicleResource\RelationManagers;
@@ -69,14 +69,14 @@ class VehicleResource extends Resource
                             Select::make('body_type')
                                 ->label(__('Body type'))
                                 ->searchable()
-                                ->options(VehicleBodyTypeEnum::options())
+                                ->options(VehicleBodyType::options())
                                 ->placeholder(__('Type'))
                                 ->required()
                                 ->columnSpan(2),
                             Select::make('color')
                                 ->label(__('Color'))
                                 ->searchable()
-                                ->options(VehicleColorEnum::options())
+                                ->options(VehicleColor::options())
                                 ->placeholder(__('Color'))
                                 ->required()
                                 ->columnSpan(2),
@@ -108,7 +108,7 @@ class VehicleResource extends Resource
                                 ->label(__('Gear box type'))
                                 ->searchable()
                                 ->default(__('Automatic'))
-                                ->options(VehicleGearBoxTypeEnum::options())
+                                ->options(VehicleGearBoxType::options())
                                 ->hint(__('Optional'))
                                 ->visible(fn ($get) => $get('advanced'))
                                 ->columnSpan(3),
@@ -128,7 +128,7 @@ class VehicleResource extends Resource
                                 ->columnSpan(4),
                             Select::make('mode')
                                 ->label(__('Mode'))
-                                ->options(VehicleModeEnum::options())
+                                ->options(VehicleMode::options())
                                 ->default(__('active'))
                                 ->placeholder(__('Select mode'))
                                 ->required()
@@ -156,7 +156,7 @@ class VehicleResource extends Resource
                                 ->label(__('Fuel type'))
                                 ->searchable()
                                 ->default(__('Petrol'))
-                                ->options(VehicleFuelTypeEnum::options())
+                                ->options(VehicleFuelType::options())
                                 ->hint(__('Optional'))
                                 ->visible(fn ($get) => $get('advanced'))
                                 ->columnSpan(1),
@@ -238,7 +238,7 @@ class VehicleResource extends Resource
                             Select::make('number_of_cylinder')
                                 ->label(__('No. of cylinder'))
                                 ->placeholder(__('No. of cylinder'))
-                                ->options(VehicleCylinderEnum::options())
+                                ->options(VehicleCylinder::options())
                                 ->default(4)
                                 ->hint(__('Optional'))
                                 ->visible(fn ($get) => $get('advanced'))

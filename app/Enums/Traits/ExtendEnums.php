@@ -4,7 +4,7 @@ namespace App\Enums\Traits;
 
 use BackedEnum;
 
-/** Snippet extracted from [ArchTech\Enums] <github.com/archtechx/enums>*/
+/** Snippet extracted from [ArchTech\Enums] <github.com/archtechx/enums> */
 trait ExtendEnums
 {
     /** Get an associative array of [case name => case value]. */

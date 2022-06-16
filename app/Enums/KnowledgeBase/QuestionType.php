@@ -4,7 +4,7 @@ namespace App\Enums\KnowledgeBase;
 
 use App\Enums\Traits\ExtendEnums;
 
-enum QuestionTypeEnum: string
+enum QuestionType: string
 {
     use ExtendEnums;
 

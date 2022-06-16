@@ -9,7 +9,7 @@ use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Placeholder;
-use App\Enums\Automobile\VehicleMaintenanceServiceTypeEnum;
+use App\Enums\Automobile\VehicleMaintenanceServiceType;
 use Filament\Resources\RelationManagers\HasManyRelationManager;
 
 class MaintenanceServicesRelationManager extends HasManyRelationManager
@@ -25,7 +25,7 @@ class MaintenanceServicesRelationManager extends HasManyRelationManager
                 Grid::make(6)->schema([
                     Select::make('type')
                         ->label(__('Type'))
-                        ->options(VehicleMaintenanceServiceTypeEnum::options())
+                        ->options(VehicleMaintenanceServiceType::options())
                         ->default(__('material'))
                         ->placeholder(__('Select Type'))
                         ->required()

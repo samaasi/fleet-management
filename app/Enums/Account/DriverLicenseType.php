@@ -4,10 +4,9 @@ namespace App\Enums\Account;
 
 use App\Enums\Traits\ExtendEnums;
 
-enum GenderEnum: string
+enum DriverLicenseType: string
 {
     use ExtendEnums;
 
-    case MALE = "m";
-    case FEMALE = "f";
+    case DRIVER_LICENSES = "driver license";
 }

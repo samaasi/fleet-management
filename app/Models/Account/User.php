@@ -10,7 +10,7 @@ use Filament\Models\Contracts\HasName;
 use Spatie\Permission\Traits\HasRoles;
 use Filament\Models\Contracts\HasAvatar;
 use Illuminate\Notifications\Notifiable;
-use App\Enums\Account\UserAccountTypeEnum;
+use App\Enums\Account\UserAccountType;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -46,7 +46,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, HasMedia,
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'type' => UserAccountTypeEnum::class,
+        'type' => UserAccountType::class,
     ];
 
     public function getFullNameAttribute(): string

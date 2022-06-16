@@ -2,10 +2,10 @@
 
 namespace App\Models\Account;
 
-use App\Enums\Account\GenderEnum;
+use App\Enums\Account\Gender;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
-use App\Enums\Account\MaritalStatusEnum;
+use App\Enums\Account\MaritalStatus;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -23,8 +23,8 @@ class Driver extends Model implements HasMedia
     public const DRIVER_PHOTOGRAPH_MEDIA_COLLECTION = "driver-photographs";
 
     protected $casts = [
-        'gender' => GenderEnum::class,
-        'marital_status' => MaritalStatusEnum::class,
+        'gender' => Gender::class,
+        'marital_status' => MaritalStatus::class,
     ];
 
     public function user(): BelongsTo

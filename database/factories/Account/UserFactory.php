@@ -2,7 +2,7 @@
 
 namespace Database\Factories\Account;
 
-use App\Enums\Account\UserAccountTypeEnum;
+use App\Enums\Account\UserAccountType;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\Models\Account\User;
@@ -19,7 +19,7 @@ class UserFactory extends Factory
             'last_name' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'type' => UserAccountTypeEnum::DRIVER->value,
+            'type' => UserAccountType::DRIVER->value,
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10),
         ];
