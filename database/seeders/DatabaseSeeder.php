@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PermissionSeeder::class,
             RoleSeeder::class,
+            DefaultSingleSeeder::class,
         ], ['--no-interaction' => true]);
     }
 }
