@@ -5,7 +5,7 @@
 
     <x-form.form
         method="POST"
-        class="space-y-6"
+        class="space-y-6 px-4"
         wire:submit.prevent="authenticate"
     >
         {{ $this->form }}
