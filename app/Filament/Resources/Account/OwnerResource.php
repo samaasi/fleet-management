@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\Account\OwnerResource\Pages;
 use App\Filament\Resources\Account\OwnerResource\RelationManagers;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 
 class OwnerResource extends Resource
@@ -36,7 +37,7 @@ class OwnerResource extends Resource
                             SpatieMediaLibraryFileUpload::make('passport')
                                 ->avatar()
                                 ->collection(Owner::OWNER_PASSPORT_MEDIA_COLLECTION)
-                                ->columnSpan(6),
+                                ->columnSpan('full'),
                             TextInput::make('first_name')
                                 ->label(__('First name'))
                                 ->placeholder(__('First name'))
@@ -87,15 +88,13 @@ class OwnerResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('first_name'),
-                TextColumn::make('last_name'),
-                TextColumn::make('other_name'),
+                ImageColumn::make('passport')
+                    ->rounded()
+                    ->label(__('Image')),
+                TextColumn::make('full_name'),
                 TextColumn::make('email'),
                 TextColumn::make('phone'),
-                TextColumn::make('community'),
-                TextColumn::make('city'),
                 TextColumn::make('state'),
-                TextColumn::make('country')
             ])
             ->filters([
                 //

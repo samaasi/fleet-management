@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->date('expiration_date');
             $table->boolean('verified')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

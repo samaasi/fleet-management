@@ -2,6 +2,8 @@
 
 namespace App\Models\Automobile;
 
+use App\Models\Account\Owner;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -21,6 +23,11 @@ class Vehicle extends Model implements HasMedia
     protected $casts = [
 
     ];
+
+    public function owner(): BelongsTo
+    {
+        return $this->belongsTo(Owner::class);
+    }
 
     public function histories(): HasMany
     {

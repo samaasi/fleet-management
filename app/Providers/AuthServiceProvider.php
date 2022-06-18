@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
+use App\Models\IAM\Role;
 use App\Models\Account\User;
 use Laravel\Sanctum\Sanctum;
 use App\Models\Account\Owner;
 use App\Models\Account\Driver;
+use App\Policies\IAM\RolePolicy;
 use App\Models\Misc\Registration;
 use App\Models\Automobile\Vehicle;
 use App\Policies\Account\UserPolicy;
@@ -60,6 +62,7 @@ class AuthServiceProvider extends ServiceProvider
         DriverGuarantorMeta::class => DriverGuarantorMetaPolicy::class,
         VehicleMaintenance::class => VehicleMaintenancePolicy::class,
         VehicleMaintenanceService::class => VehicleMaintenanceServicePolicy::class,
+        Role::class => RolePolicy::class,
     ];
 
     /** Register any authentication / authorization services. */

@@ -8,4 +8,9 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateMaintenance extends CreateRecord
 {
     protected static string $resource = MaintenanceResource::class;
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        dd($data);
+    }
 }

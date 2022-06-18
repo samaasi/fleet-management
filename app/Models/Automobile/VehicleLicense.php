@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class VehicleLicense extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+    //use SoftDeletes;
 
     protected const VEHICLE_LICENSE_MEDIA_COLLECTION = "vehicle-licenses";
 

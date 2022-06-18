@@ -13,6 +13,7 @@ return new class extends Migration {
                 ->nullable()
                 ->constrained()
                 ->cascadeOnUpdate();
+            $table->string('identifier')->unique();
             $table->string('make');
             $table->string('model');
             $table->string('body_type');
