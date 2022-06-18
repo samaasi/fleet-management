@@ -246,6 +246,7 @@ class VehicleResource extends Resource
                     ])
                         ->columnSpan('full'),
                 ])
+                    ->columnSpan('full')
             ]);
     }
 
